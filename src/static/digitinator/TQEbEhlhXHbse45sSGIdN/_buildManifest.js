@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f051cb7920cda67f88259fa25c37141da1e324b4a10397b14d85169b228c355
-size 580
+self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fd7eeaac4.69598c38ec4a55e5d203.js","static\u002Fchunks\u002F545f34e4.b935850a9926f3c117af.js","static\u002Fchunks\u002F31664189.f157bab729b44dfe3e8b.js","static\u002Fchunks\u002F78e521c3.2e41d0500c761a563631.js","static\u002Fcss\u002Fdigitinator-module.css","static\u002Fchunks\u002Fpages\u002Findex-eb0a9a04d17476b335d6.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error-44c3523a92e32932068d.js"],sortedPages:["\u002F","\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

@@ -1,8 +1,6 @@
 src filter=lfs diff=lfs merge=lfs -text
-build_voice_cloning.py filter=lfs diff=lfs merge=lfs -text
 install_dependencies.sh filter=lfs diff=lfs merge=lfs -text
 requirements.txt filter=lfs diff=lfs merge=lfs -text
-build.py filter=lfs diff=lfs merge=lfs -text
 src/models/voice_cloning/synthesizer/saved_models/pretrained/pretrained.pt filter=lfs diff=lfs merge=lfs -text
 src/uploads filter=lfs diff=lfs merge=lfs -text
 src/controllers filter=lfs diff=lfs merge=lfs -text
@@ -95,10 +93,8 @@ documentation/deepfake/deepfake.md filter=lfs diff=lfs merge=lfs -text
 documentation/deepfake/kapwing-trim.png filter=lfs diff=lfs merge=lfs -text
 documentation/deepfake/wav2lip_architecture.png filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/model_creation/model_creation_documentation.md filter=lfs diff=lfs merge=lfs -text
-documentation/digitinator/model_creation/model_test.py filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/model_creation/confusion_matrix_error_plot.png filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/model_creation/confusion_matrix_plot.png filter=lfs diff=lfs merge=lfs -text
-documentation/digitinator/model_creation/model_build.py filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/model_creation/model_conversion.gif filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/source_code/DetectButton filter=lfs diff=lfs merge=lfs -text
 documentation/digitinator/source_code/model filter=lfs diff=lfs merge=lfs -text
@@ -135,10 +131,8 @@ documentation/readme_images/connect_button.png filter=lfs diff=lfs merge=lfs -te
 documentation/readme_images/connection_string.png filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/obama.wav filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/trump.wav filter=lfs diff=lfs merge=lfs -text
-documentation/voice_cloning/__init__.py filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/deep_fake_voice_creation.md filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/model.png filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/sample_text.txt filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/voice_cloning.md filter=lfs diff=lfs merge=lfs -text
-documentation/voice_cloning/voice_creation_script.py filter=lfs diff=lfs merge=lfs -text
 documentation/voice_cloning/__pycache__ filter=lfs diff=lfs merge=lfs -text
