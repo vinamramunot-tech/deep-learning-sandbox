@@ -5,3 +5,4 @@ main.py filter=lfs diff=lfs merge=lfs -text
 requirements.txt filter=lfs diff=lfs merge=lfs -text
 README.md filter=lfs diff=lfs merge=lfs -text
 build.py filter=lfs diff=lfs merge=lfs -text
+src/models/voice_cloning/synthesizer/saved_models/pretrained/pretrained.pt filter=lfs diff=lfs merge=lfs -text
