@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90ff4db4f0bfd47cb579074c64ef3df3757f99b14c65b056b677af74735f41ad
-size 1110
+Welcome to the senior design project
+– deep learning sandbox!
+ This project was created by 
+four computer science students 
+at Purdue University Fort Wayne,
+ Jimmy Nguyen, Rodney McQuain, 
+Vinamra Munot, and Jacob Mills. 
+Moreover, the project was advised 
+and sponsored by Dr. Zesheng Chen 
+in the department of computer science. 
+The goals of this project include
+ implementing the applications based
+ on latest deep learning technologies,
+ understanding the advantages and limitations
+ of deep learning,
+ and building a demo for k to 12 students
+ who are interested in computer science.
+ The deep learning sandbox contains
+ nine different applications:
+ object detection in images,
+ object detection in videos,
+ real-time object detection, 
+face emotion and landmark detection, 
+face recognition in images,
+ real-time face recognition, 
+face mask detection, 
+hand-written number detection, 
+and voice cloning.
+ As you can see, the applications 
+can run on the different platforms such
+ as desktop, mobile phones,
+ and Internet-of-things devices.
+ This is an amazing project!
+ I highly recommend it to you!
