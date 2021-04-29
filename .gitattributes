@@ -25,11 +25,6 @@ src/static/landing_page/applications filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/favicon.ico filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/favicon.svg filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/main_page_logo.jpeg filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/about_us/dr.[[:space:]]chen.png filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/about_us/jacob.png filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/about_us/jimmy.png filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/about_us/rodney.png filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/about_us/vinamra.png filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/applications/digitinator.png filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/applications/face_api.png filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/applications/face_api_emotions.mp4 filter=lfs diff=lfs merge=lfs -text
