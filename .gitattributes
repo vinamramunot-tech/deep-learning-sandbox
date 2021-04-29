@@ -3,7 +3,6 @@ src/models/voice_cloning/synthesizer/saved_models/pretrained/pretrained.pt filte
 src/static/landing_page/about_us filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/yolov3.weights filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints filter=lfs diff=lfs merge=lfs -text
-src/yolo_weights/coco.names filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints/checkpoint filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints/yolov3.tf.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints/yolov3.tf.index filter=lfs diff=lfs merge=lfs -text
