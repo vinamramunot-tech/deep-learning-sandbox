@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5c7e6b59079c1eaaa9421d7dabe52c196cb81ee14b3ab9580a8b95d0281e029e
-size 423
+.input_heading {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+body {
+    padding-bottom: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#upload-area{
+    display: flex;
+    flex-direction: row;
+}
+
+#imageUpload {
+    padding: 0;
+}
+
+#imageUpload, .drop-zone{
+    display: none;
+}
+
+.drop-box-faceapi {
+    border-color: blue;
+    color: blue;
+}

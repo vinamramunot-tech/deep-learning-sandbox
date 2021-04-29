@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2b8aa26d0789da5ad01b8f8096159481c99575636c71b9e912a4f9c9570f834
-size 324
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faceapi-media-container {
+    position: relative;
+}
+
+.faceapi-media-container > * {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.faceapi-media-container, video {
+    width: 100%; 
+}

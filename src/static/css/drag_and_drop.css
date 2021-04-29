@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f553b355c1c78884f20d9893baa05e80c194056ee858de21655cca9d2f22817
-size 536
+.drop-box {
+    border-radius: 2px;
+    border: 2px dashed black;
+    max-width: 500px;
+    min-height: 125px;
+    padding: 10px;
+}
+
+.input_heading {
+    margin-bottom: 10px;
+}
+
+.drop-zone {
+    /* 
+    Fills the remaining height of the drop-box, so the area that a user can drop 
+    in fills the rest of the container.
+    */
+    padding-bottom: 58px; 
+}
+
+#upload-file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.drop-zone.dragover {
+    border-color: blue;
+    color: blue;
+}

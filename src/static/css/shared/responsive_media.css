@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:503719cdf65fdf1a779490906bb578d4ba09573c4031ca6722ba1e1413038dc5
-size 209
+.responsive-media, .responsive-media-variable-height {
+    width: 100%;
+    max-width: 720px;
+}
+
+.responsive-media-variable-height {
+    object-fit: contain;
+    max-height: 100vh;
+    object-position: 0 0;
+}

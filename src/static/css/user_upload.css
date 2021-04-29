@@ -1,3 +1,64 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f2095a23308b471fcb60b2ee3956d4dda4696ca1eddbc37555699b058127121
-size 1013
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-controls {
+    display: flex;
+    margin: 5px;
+}
+
+.user-controls > *:not(:first-child) {
+    margin: 2.5px;
+    cursor: pointer;
+}
+
+button#choose-files {
+    display: inline-flex;
+}
+
+.image-container > img {
+    width: 150px;
+    height: 150px;
+}
+
+.image-container > button {
+    display: inline;
+    position: absolute;
+    transform: translate(-150px, 0px);
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image-container > button:hover {
+    background-color: black;
+}
+
+.image-container {
+    margin: 5px;
+}
+
+.new-user > button {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.image-controls {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.user-images {
+    background-color: lightblue;
+    border: black;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 10px;
+}

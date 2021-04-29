@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1c8ca9fbdf21b195981056608ba54b65ed366e488115fc1800d20b979f24cefc
-size 308
+footer {
+    text-align: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    border: 2px solid black;
+}
+
+.image-cursor {
+    cursor: default;
+}
+
+.video-cursor {
+    cursor: pointer;
+}
+
+#media-upload-button {
+    padding: 0;
+}
