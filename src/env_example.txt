@@ -1,0 +1,5 @@
+YOLO_THRESHOLD='0.1'
+SOCKETIO_ASYNC_MODE=threading
+SERVER_IP='10.13.10.48'
+SERVER_PORT='5051'
+MONGO_CONNECTION='mongodb+srv://<username>:<password>@cluster0.vypct.mongodb.net/test?retryWrites=true&w=majority'
