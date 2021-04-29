@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4d8dc8d0b33bd7f531422e37b35ab70ebb1026992393bf79d8eb00224c80cfd
-size 583
+import * as tf from '@tensorflow/tfjs';
+import { loadModel } from './loadModel';
+
+const MNIST_DATASET_DIMENSION_PX = 28;
+const NUMBER_OF_CHANNELS = 1;
+
+const detect = async (imageData: ImageData): Promise<number[]> => {
+    const model = await loadModel();
+    const tensor = tf.browser.fromPixels(imageData, NUMBER_OF_CHANNELS)
+        .resizeNearestNeighbor([MNIST_DATASET_DIMENSION_PX, MNIST_DATASET_DIMENSION_PX])
+        .mean(2)
+        .expandDims(2)
+        .expandDims()
+        .toFloat();
+    return await model.predict(tensor.div(255.0)).data();
+}
+
+export default detect;
