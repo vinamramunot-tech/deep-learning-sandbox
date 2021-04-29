@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:75d512bbee16abf876f8dc7b565d2fde2be779022169204a7a599661c2ab9403
-size 273
+from os import environ, path
+from dotenv import load_dotenv
+
+load_dotenv(path.join(path.abspath(path.dirname(path.dirname(__file__))), '.env'))
+
+def set_threshold_or_default(threshold):
+    return float(environ.get('YOLO_THRESHOLD')) if not threshold else float(threshold)
