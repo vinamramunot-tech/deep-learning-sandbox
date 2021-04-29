@@ -21,14 +21,6 @@ src/static/digitinator/media/logo.svg filter=lfs diff=lfs merge=lfs -text
 src/static/digitinator/media/pencil.9ca605a65849cff6bd7311d99fdefe99.svg filter=lfs diff=lfs merge=lfs -text
 src/static/digitinator/model/group1-shard1of1.bin filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/about_us filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/face_api_emotions.mp4 filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/face_mask_detection.mp4 filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/object_detection.jpg filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/digital_cloning.jpg filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/face_api.mp4 filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/real_time_object_detection.mp4 filter=lfs diff=lfs merge=lfs -text
-src/static/landing_page/applications/upload_image.jpg filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/yolov3.cfg filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/yolov3.weights filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints filter=lfs diff=lfs merge=lfs -text
