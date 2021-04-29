@@ -1,3 +1,122 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d46a0679121b965f7f5058b92da8f74fb3af2176b589b4635faabd16fa446cb9
-size 5730
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="../static/favicon.ico" />
+    <title>User Upload</title>
+    <script defer src="../static/js/face-api.min.js"></script>
+    <script defer src="../static/js/vendor/buttonstrip.min.js"></script>
+    <script defer src="../static/js/vendor/toastme.min.js"></script>
+    <script defer src="../static/js/preload_faceapi.js"></script>
+    <script defer src="../static/js/standardAlert.js"></script>
+    <script defer src="../static/js/max_image_per_user.js"></script>
+    <script defer src="../static/js/NoAccessableCameraException.js"></script>
+    <script defer src="../static/js/image_queue.js"></script>
+    <script defer src="../static/js/camera_modal.js"></script>
+    <script defer src="../static/js/camera.js"></script>
+    <script defer src="../static/js/image_upload_user.js"></script>
+    <script defer src="../static/components/UserComponent.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/vendor/toastme.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/vendor/buttonstrip.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/container.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/global.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/responsive_media.css">
+    <link rel="stylesheet" href="../static/css/user_upload.css">
+    <link rel="stylesheet" href="../static/css/modal.css">
+    <link rel="stylesheet" href="../static/css/loading_spinner.css">
+</head>
+
+
+<body>
+    <div id="headers"></div>
+    <h1 class="user-edit">Edit User</h1>
+    <p class="user-edit">Enter the name of an existing user and select "Find User" to edit or view their information</p>
+    <form id="search-form" class="search-form user-edit">
+        <label for="search-name">Username:</label>
+        <input id="search-name" type="text" required />
+        <button id="search" type="submit">Find User</button>
+    </form>
+    <div id='user-info' class="user-edit"></div>
+    <h1 class="account-creation">Account Creation</h1>
+    <p class="account-creation">To create a user, fill out the form below and add a maximum of ten images to the queue.
+        When you finish adding images, click the "Create User" button to create a new user.
+    </p>
+    <form id="new-user" class="new-user account-creation" method="POST" enctype="multipart/form-data">
+        <label for="user-name">Name:</label>
+        <input id="user-name" name="user-name" type="text" required>
+        
+        <input id="image-uploads" name="images" type="file" style="display: none;" multiple>
+        <span>
+            <button id="choose-files" type="button">Choose Images</button>
+        </span>
+            <label id="message-queue" for="choose-files"></label>
+        <br>
+        <div class="image-controls">
+            <button id="clear">Clear Images</button>
+            
+            <button id="take-picture-default" class="open-modal" data-open="modal1" type="button">
+                Take Picture
+            </button>
+        </div>
+        
+        <button id="upload" type="submit">Create User</button>
+    </form>
+   
+    <br>
+    <em>After uploading user image(s), please go to the <a href="face_recognition_for_user_video.html" target="_blank">Face Recognition In Real Time</a> page to view face recognition in video.</em>
+    
+    <div class="modal" id="modal1" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                Take Your Picture
+                <button class="close-modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </header>
+            <section class="modal-content">
+                <p><strong>Press ✕, ESC, or click outside of the window to close it</strong></p>
+                <div class="camera">
+                    <video class="video">Video stream not available.</video><br>
+                </div>
+                <div class="camera-controls">
+                    <button class="startbutton photo-toggle">Take photo</button>
+                    <button class="approve photo-toggle">Approve</button>
+                    <button class="reject photo-toggle">Reject</button>
+                </div>
+                <canvas class="canvas" />
+            </section>
+            <footer class="modal-footer">
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                Take Your Picture
+                <button class="close-modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </header>
+            <section class="modal-content">
+                <p><strong>Press ✕, ESC, or click outside of the window to close it</strong></p>
+                <div class="camera">
+                    <video class="video">Video stream not available.</video><br>
+                </div>
+                <div class="camera-controls">
+                    <button class="startbutton photo-toggle">Take photo</button>
+                    <button class="approve photo-toggle">Approve</button>
+                    <button class="reject photo-toggle">Reject</button>
+                </div>
+                <canvas class="canvas" />
+            </section>
+            <footer class="modal-footer">
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

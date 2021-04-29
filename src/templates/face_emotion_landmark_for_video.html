@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:676e9d55335d103b967bf34d6a443e0312bb12fc75a3b3be51134637906e8164
-size 1684
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+    <title>Face recognition video</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/global.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/responsive_media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/face_api_video.css">
+
+    <script defer src="../static/js/face-api.min.js"></script>
+    <script defer src="../static/js/preload_faceapi.js"></script>
+    <script defer src="../static/js/NoAccessableCameraException.js"></script>
+    <script defer src="../static/js/face_emotion_landmark_for_video.js"></script>
+</head>
+
+<body>
+    <h1>Face Emotion Landmark for Video</h1>
+    <div>
+		<p>
+            <cite>Face API</cite> implementation by Vincent M&uuml;hler 
+            <span> <a href="https://github.com/justadudewhohacks/face-api.js">Github</a></span>
+        </p>
+    </div>
+    <p>
+        <input id="faceapi_threshold" type="number" name="faceapi_threshold" value="0.6" step="0.01" min="0.0" max="1.0" required />
+        <label for="faceapi_threshold">
+            Minimum confidence threshold (between 0.0 and 1.0)
+        </label>
+    </p>
+    <form id="faceapi-face-detection-form">
+        <p><button id="detect-button" type="submit">Detect</button></p>
+    </form>
+    <div class="faceapi-media-container" id="output">
+        <video id="video" class="responsive-media" autoplay muted></video>
+    </div>
+</body>
+
+</html>

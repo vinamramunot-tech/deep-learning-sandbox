@@ -1,3 +1,142 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba4ea1788ce1e278a057a8e4f43444b55f1ab8b712278404bafd88ffe259b9ad
-size 11824
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Digit-Inator</title>
+    <meta name="description"
+        content="Convert your favorite hand drawn digit to text with the latest and greatest in computer vision" />
+    <meta name="og:title" property="og:title" content="Digit-Inator" />
+    <meta name="og:description" property="og:description"
+        content="Convert your favorite hand drawn digit to text with the latest and greatest in computer vision" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Digit-Inator" />
+    <meta name="twitter:title" content="Digit-Inator" />
+    <meta name="twitter:description"
+        content="Convert your favorite hand drawn digit to text with the latest and greatest in computer vision" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="robots" content="index, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#CA9EFF" />
+    <link rel="apple-touch-icon" href="../static/digitinator/media/logo.svg" />
+    <link rel="icon" href="../static/digitinator/media/logo.svg" type="image/svg+xml" sizes="any" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="next-head-count" content="2" />
+    <link rel="preload" href="../static/digitinator/css/digitinator-global.css" as="style" />
+    <link rel="stylesheet" href="../static/digitinator/css/digitinator-global.css" data-n-g="" />
+    <link rel="preload" href="../static/digitinator/css/digitinator-module.css" as="style" />
+    <link rel="stylesheet" href="../static/digitinator/css/digitinator-module.css" data-n-p="" /><noscript
+        data-n-css=""></noscript>
+    <link rel="preload" href="../static/digitinator/chunks/main-30614a1d6d6c4de3d08f.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/webpack-e067438c4cf4ef2ef178.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/framework.1d36bc031662b4dc4c28.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/commons.f98e9b6e8b7152d4434a.js" as="script" />
+    <link rel="preload"
+        href="../static/digitinator/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.08f941de93f40c841c41.js"
+        as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/pages/_app-70a7ca09a071d2c42364.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/d7eeaac4.69598c38ec4a55e5d203.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/545f34e4.b935850a9926f3c117af.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/31664189.f157bab729b44dfe3e8b.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/78e521c3.2e41d0500c761a563631.js" as="script" />
+    <link rel="preload" href="../static/digitinator/chunks/pages/index-eb0a9a04d17476b335d6.js" as="script" />
+</head>
+
+<body>
+    <div id="__next">
+        <header
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.75)), url(../static/digitinator/media/banner-image.jpg)"
+            class="Banner_banner-img__3zVfL">
+            <div class="Banner_banner-container__18NCC">
+                <h1 class="Banner_banner-header__2l4Fz Banner_hide__OLKUw ">Digit-Inator</h1>
+                <div class="Banner_banner-text-container__1xqkT"><span
+                        class="Banner_banner-text__2zouO Banner_hide__OLKUw ">Convert your favorite <span
+                            class="Accent_accent__ihsWO">hand drawn</span> digit to text with the latest and greatest in
+                        <span class="Accent_accent__ihsWO">computer vision</span></span></div>
+            </div><a aria-label="Go to the application, number detection"
+                class="Banner_go-down-icon__3r4gq Banner_hide__OLKUw " href="#detection"><span
+                    class="icon undefined"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                        viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                        </path>
+                    </svg></span></a>
+        </header>
+        <div class="App_App__2w3St">
+            <div>
+                <div id="detection" class="DrawingCanvasContainer_drawing-canvas-container__1l5Lz">
+                    <h2>Draw a Number!</h2>
+                    <div>Press and hold your left mouse button or touch screen to draw.<br />Click the &quot;
+                        <!-- -->Detect
+                        <!-- -->&quot; button when you&#x27;re ready to see my best guess of what you drew!
+                    </div><br />
+                    <div class="DrawingCanvasContainer_drawing-canvas-and-predictions-container__rmmeD">
+                        <div><canvas class="DrawingCanvas_drawing-canvas__2cPlU"></canvas><br /><button
+                                class="Button_button__1nvE4 SecondaryButton_secondary-button__3tJ9k"><span
+                                    class="ColorSelectionButton_color-picker-container__3n6x4"><input type="color"
+                                        value="#ebebeb" class="ColorSelectionButton_color-picker__3EV2E"
+                                        name="stroke-color" id="stroke-color" /></span><label for="stroke-color"
+                                    class="cursor-pointer">Color</label></button><button
+                                class="Button_button__1nvE4 PrimaryButton_primary-button__134tS"><span
+                                    class="IconText_icon-text__14fGw"><span class="icon undefined"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 24 24" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path
+                                                    d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-4.586 6l1.768 1.768-1.414 1.414L12 15.414l-1.768 1.768-1.414-1.414L10.586 14l-1.768-1.768 1.414-1.414L12 12.586l1.768-1.768 1.414 1.414L13.414 14zM9 4v2h6V4H9z">
+                                                </path>
+                                            </g>
+                                        </svg></span> <!-- -->Clear</span></button><br /><button
+                                class="Button_button__1nvE4 GradientButton_gradient-button__2xALP" disabled=""><span
+                                    class="IconText_icon-text__14fGw"><span class="icon undefined"><svg
+                                            stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                            stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                                        </svg></span> <!-- -->Detect</span> <!-- --> <span
+                                    class="icon LoadingSpinner_loading-spinner__1c7YT LoadingSpinner_loading__Cox1a"><svg
+                                        stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
+                                        viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16 8c-0.020-1.045-0.247-2.086-0.665-3.038-0.417-0.953-1.023-1.817-1.766-2.53s-1.624-1.278-2.578-1.651c-0.953-0.374-1.978-0.552-2.991-0.531-1.013 0.020-2.021 0.24-2.943 0.646-0.923 0.405-1.758 0.992-2.449 1.712s-1.237 1.574-1.597 2.497c-0.361 0.923-0.533 1.914-0.512 2.895 0.020 0.981 0.234 1.955 0.627 2.847 0.392 0.892 0.961 1.7 1.658 2.368s1.523 1.195 2.416 1.543c0.892 0.348 1.851 0.514 2.799 0.493 0.949-0.020 1.89-0.227 2.751-0.608 0.862-0.379 1.642-0.929 2.287-1.604s1.154-1.472 1.488-2.335c0.204-0.523 0.342-1.069 0.415-1.622 0.019 0.001 0.039 0.002 0.059 0.002 0.552 0 1-0.448 1-1 0-0.028-0.001-0.056-0.004-0.083h0.004zM14.411 10.655c-0.367 0.831-0.898 1.584-1.55 2.206s-1.422 1.112-2.254 1.434c-0.832 0.323-1.723 0.476-2.608 0.454-0.884-0.020-1.759-0.215-2.56-0.57-0.801-0.354-1.526-0.867-2.125-1.495s-1.071-1.371-1.38-2.173c-0.31-0.801-0.457-1.66-0.435-2.512s0.208-1.694 0.551-2.464c0.342-0.77 0.836-1.468 1.441-2.044s1.321-1.029 2.092-1.326c0.771-0.298 1.596-0.438 2.416-0.416s1.629 0.202 2.368 0.532c0.74 0.329 1.41 0.805 1.963 1.387s0.988 1.27 1.272 2.011c0.285 0.74 0.418 1.532 0.397 2.32h0.004c-0.002 0.027-0.004 0.055-0.004 0.083 0 0.516 0.39 0.94 0.892 0.994-0.097 0.544-0.258 1.075-0.481 1.578z">
+                                        </path>
+                                    </svg></span></button><br /><span role="alert"
+                                class="ErrorMessage_error__1GFJP ">The model is currently loading, please wait.</span>
+                        </div>
+                    </div><br /><br />
+                </div>
+            </div>
+        </div>
+        <footer class="Footer_footer__22y9A">©
+            <!-- -->2020
+            <!-- -->-2021
+            <!-- -->
+            <!-- -->Digit-Inator
+        </footer>
+    </div>
+    <script id="__NEXT_DATA__"
+        type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"TQEbEhlhXHbse45sSGIdN","nextExport":true,"autoExport":true,"isFallback":false}</script>
+    <script nomodule="" src="../static/digitinator/chunks/polyfills-56c7bebd369733d6b640.js"></script>
+    <script src="../static/digitinator/chunks/main-30614a1d6d6c4de3d08f.js" async=""></script>
+    <script src="../static/digitinator/chunks/webpack-e067438c4cf4ef2ef178.js" async=""></script>
+    <script src="../static/digitinator/chunks/framework.1d36bc031662b4dc4c28.js" async=""></script>
+    <script src="../static/digitinator/chunks/commons.f98e9b6e8b7152d4434a.js" async=""></script>
+    <script src="../static/digitinator/chunks/f6078781a05fe1bcb0902d23dbbb2662c8d200b3.08f941de93f40c841c41.js"
+        async=""></script>
+    <script src="../static/digitinator/chunks/pages/_app-70a7ca09a071d2c42364.js" async=""></script>
+    <script src="../static/digitinator/chunks/d7eeaac4.69598c38ec4a55e5d203.js" async=""></script>
+    <script src="../static/digitinator/chunks/545f34e4.b935850a9926f3c117af.js" async=""></script>
+    <script src="../static/digitinator/chunks/31664189.f157bab729b44dfe3e8b.js" async=""></script>
+    <script src="../static/digitinator/chunks/78e521c3.2e41d0500c761a563631.js" async=""></script>
+    <script src="../static/digitinator/chunks/pages/index-eb0a9a04d17476b335d6.js" async=""></script>
+    <script src="../static/digitinator/TQEbEhlhXHbse45sSGIdN/_buildManifest.js" async=""></script>
+    <script src="../static/digitinator/TQEbEhlhXHbse45sSGIdN/_ssgManifest.js" async=""></script>
+</body>
+
+</html>

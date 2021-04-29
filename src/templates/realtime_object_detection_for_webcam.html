@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74bd4e108c9d78b7e8a3a3fbe64acc15c875537612496c45d118d2f3fd4c821b
-size 2753
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/global.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/responsive_media.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/realtime_object_detection_for_webcam.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/loading_spinner.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="../static/js/NoAccessableCameraException.js" defer></script>
+    <script src="../static/js/realtime_object_detection_for_webcam.js" defer></script>
+</head>
+
+<body>
+    <div id="page-loading-spinner"></div>
+
+    <h1>General Object Detection with Webcam</h1>
+    <div>
+        <p>
+            <cite>tensorflowjs</cite>: a JavaScript library by TensorFlow 
+            <span><a href="https://www.tensorflow.org/js">tensorflowjs</a></span>
+        </p>
+        <p>Parts of this object detection implementation can be found here: 
+            <span> 
+                <a href="https://codelabs.developers.google.com/codelabs/tensorflowjs-object-detection">
+                    Google codelabs
+                </a>
+            </span>
+        </p>
+    </div>
+    <section>
+        <form>
+            <input
+                id="accuracy-threshold"     
+                type="number"   
+                name="accuracy-threshold" 
+                value="0.6"
+                step="0.01" 
+                min="0.0"
+                max="1.0" 
+                required
+            >
+            <label for="accuracy-threshold">
+                Confidence threshold (between 0.0 and 1.0) (higher values reflect more accurate results)
+            </label>
+            <br>
+            <input id="fps" type="number" name="fps" value="2" step="0.25" min="0.25" max="5.0" required>
+            <label for="fps">
+                FPS (frames-per-second). Higher values reflect higher frames being processed (faster detection results)
+            </label>
+            <br>
+            <button id="detect-button">Detect</button>
+        </form>
+        <div id="live-view" class="video-container">
+            <video preload="none" id="webcam" class="responsive-media" autoplay></video>
+        </div>
+    </section>
+</body>
+
+</html>

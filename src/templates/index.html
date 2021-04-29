@@ -1,3 +1,66 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:786e1868cd6327b0b8a731cfe83063762771946e318360d13681473e10097f2d
-size 2618
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Deep Learning Sandbox</title>
+
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+    <link rel="apple-touch-icon" href="../static/landing_page/favicon.ico" />
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link
+        defer
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+        crossorigin="anonymous"
+    >
+
+    <script src="../static/js/index.js"></script>
+</head>
+
+<body>
+    {% include "landing_page_templates/nav_bar.html" %}
+    <div class="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-threeD mt-4" id="main-logo">
+                        <img class="img-fluid m-4" src="../static/landing_page/main_page_logo.jpeg"
+                            alt="Deep Learning Sandbox">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+            </div>
+            <div class="row" id="home">
+                <div class="col"></div>
+                <p class="text-xl-center m-5 text-container">Welcome to the Deep Learning Sandbox, a feature-rich
+                    application that
+                    showcases
+                    various deep-learning based projects with the goal of providing a demo to K-12
+                    students and interested individuals alike!</p>
+                <div class="col"></div>
+            </div>
+            <hr>
+            <h2 class="text-center">Applications</h2>
+            {% include "landing_page_templates/cards.html" %}
+            <hr>
+            <h2 class="text-center">About Us</h2>
+            {% include "landing_page_templates/about_us.html" %}
+        </div>
+    </div>
+    <footer class="footer p-4">
+        <p>Senior Design Project 2020-2021</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

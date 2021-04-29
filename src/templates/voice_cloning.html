@@ -1,3 +1,65 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c60632e913a749f0e76abdedf8634a8cbf97d30fdd6cb15db2be83d94684c3d
-size 2475
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Cloning</title>
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/global.css">
+    <link rel="stylesheet" href="../static/css/voice_cloning.css">
+</head>
+
+<body>
+    <div class="loading"></div>
+
+    <div class="wrapper">
+        <header>
+            <h1>Voice Cloning</h1>
+        </header>
+        <div class="sample-reading -minor-top-margin">
+            <h2 class="-default-font-size -text-align-left">
+                <strong>
+                    Sample paragraph given for reading and recording:
+                </strong>
+            </h2>
+            <p>
+                Digital cloning is an emerging technology, that involves deep-learning algorithms, which allows one to
+                manipulate currently existing audio, photos, and videos that are hyper-realistic. One of the impacts of
+                such technology is that hyper-realistic videos and photos makes it difficult for the human eye to
+                distinguish what is real and what is fake. Furthermore, with various companies making such technologies
+                available to the public, they can bring various benefits as well as potential legal and ethical
+                concerns.
+            </p>
+        </div>
+        <section class="main-controls">
+            <canvas class="visualizer" height="60px"></canvas>
+            <div id="buttons">
+                <button class="record">Record</button>
+                <button class="stop">Stop</button>
+            </div>
+        </section>
+
+        <div>
+            <section class="sound-clips"></section>
+
+            <label for="words">What do you want your voice to say?</label>
+            <input type="text" name="words" id="words" spellcheck="true" size="60" required>
+            <span class="validity"></span>
+
+            <br>
+
+            <button id="submit" class="-minor-top-margin">Clone Voice</button>
+            <div id="output"></div>
+        </div>
+        <p class="cite -major-top-margin">
+            <em>
+                Voice Cloning Implementation by Corentin Jemine at <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning">Github</a>
+            </em>
+        </p>
+    </div>
+
+    <script src="../static/js/voice_cloning.js"></script>
+</body>
+
+</html>

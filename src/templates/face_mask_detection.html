@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cbabed4c9380103359987267f38412c72c26ab4d6eb7886daa8343cf66fef56
-size 1420
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+    <title>Face Mask Detection Live Stream</title>
+
+    <link rel="stylesheet" href="../static/css/shared/global.css">
+    <link rel="stylesheet" href="../static/css/shared/responsive_media.css">
+    <link rel="stylesheet" href="../static/css/shared/container.css">
+    <link rel="stylesheet" href="../static/css/loading_spinner.css">
+
+    <script defer type="text/javascript" src="../static/js/vendor/socketio/socket.io.min.js"></script>
+    <script defer type="text/javascript" src="../static/js/raspberry_pi_live_stream.js" charset="utf-8"></script>
+</head>
+<body>
+    <h1>Face Mask Detection Live Stream</h1>
+    <p class="container">
+        <cite><a href="https://github.com/chandrikadeb7/Face-Mask-Detection">Face Mask Detection</a></cite> implementation by Chandrika Deb
+    </p>
+    <p>Enter a valid Raspberry Pi ID below to view its live video stream!</p>
+    <label for="raspberry-pi-id">Raspberry Pi ID:</label>
+    <input id="raspberry-pi-id" type="text" name="raspberry-pi-id" required />
+    <p><button id="submit-pi-id" type="button">Submit ID</button></p>
+    <p id="user-room-status"></p>
+    <img class="responsive-media">
+</body>
+</html>

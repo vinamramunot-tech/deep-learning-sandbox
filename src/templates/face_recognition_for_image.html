@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca8ffdaa19a6983530a2aa0585fd377605a54cbcd3f6e3500b9822e5c5940861
-size 2053
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/landing_page/favicon.ico" />
+	<title>Face Recognition</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/global.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/responsive_media.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/face_api_image.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/loading_spinner.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/drag_and_drop.css">
+	
+	<script src="../static/js/face-api.min.js" defer></script>
+    <script src="../static/js/preload_faceapi.js" defer></script>
+	<script src="../static/js/face_recognition_for_image.js" defer></script>
+	<script src="../static/js/html2canvas.min.js" defer></script>
+</head>
+
+<body>
+	<div>
+		<h1>Face Recognition for Image</h1>
+		<div>
+			<p>
+				<cite>Face API</cite> implementation by Vincent M&uuml;hler 
+				<span><a href="https://github.com/justadudewhohacks/face-api.js">Github</a></span>
+			</p>
+		</div>
+		<form id="faceapi-form">
+			<div id="drop-box" class="drop-box" style="display: none;">
+				<div class="input_heading">
+					Drag & drop files, or select Choose File
+				</div>
+				<div class="drop-zone" id="drop-zone">
+					<input type="file" id="imageUpload">
+					<p id="upload-file-name"></p>
+				</div>
+			</div>
+			<p>
+				<input 
+					id="faceapi_threshold" 
+					type="number" 
+					name="faceapi_threshold" 
+					value="0.6" 
+					step="0.01" 
+					min="0.0"
+					max="1.0" 
+					required
+				>
+				<label for="faceapi_threshold">
+					Distance threshold (between 0.0 and 1.0) (smaller values reflect more accurate results)
+				</label>
+			</p>
+			<p><button id="detect-button" type="submit" disabled>Detect</button></p>
+		</form>
+		<button id="download-button" style="display: none;">Download</button>
+		<div id="page-loading-spinner"></div>
+		<div id="output"></div>
+	</div>
+</body>
+
+</html>
