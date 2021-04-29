@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a1403879ae5cc947d7310e7f22d14e8cba33a446ceeb16f41c87f10498d95bb
-size 545
+
+### Commands required to run the application on Dr. Wang's server
+1. git clone https://CS360@dev.azure.com/CS360/Senior-Capstone-Project/_git/Senior-Capstone-Project
+
+2. Refer [Login Access](#login-token) to get the password to clone the repo. Click on `Generate Git Credential` to get the token
+3. python3 -m virtualenv Senior-Capstone-Project
+4. cd Senior-Capstone-Project
+5. source bin/activate
+6. pip3 install -r requirements.txt
+7. python3 build.py
+8. python3 main.py
+---
+### Login Token
+
+![Access Token](./readme_images/access_token.png)
