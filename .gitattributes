@@ -1,7 +1,6 @@
 src filter=lfs diff=lfs merge=lfs -text
 src/models/voice_cloning/synthesizer/saved_models/pretrained/pretrained.pt filter=lfs diff=lfs merge=lfs -text
 src/static/landing_page/about_us filter=lfs diff=lfs merge=lfs -text
-src/yolo_weights/yolov3.cfg filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/yolov3.weights filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/checkpoints filter=lfs diff=lfs merge=lfs -text
 src/yolo_weights/coco.names filter=lfs diff=lfs merge=lfs -text
