@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1893a0cfa304f497370b7e46bc0c1d0e975fdbbc79321cd2270b1fc5b2ff5077
-size 839
+<svg id="Component_2_1" data-name="Component 2 – 1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32">
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="16" cy="16" r="16" fill="#323232"/>
+  <g id="Component_1_2" data-name="Component 1 – 2" transform="translate(4.5 3.556)">
+    <text id="D" transform="translate(0 20.444)" fill="#ca9eff" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">D</tspan></text>
+    <text id="_1" data-name="1" transform="translate(8.771 2.903) rotate(-14)" fill="#ca9eff" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="19">1</tspan></text>
+    <path id="Path_1" data-name="Path 1" d="M5.943,0-.147,11.311" transform="translate(4.557 7.944)" fill="#ca9eff" stroke="#ca9eff" stroke-width="2"/>
+  </g>
+</svg>
