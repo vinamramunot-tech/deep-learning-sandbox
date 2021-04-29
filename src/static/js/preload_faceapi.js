@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a256ae69dbadd9c5505e65c0d18a564ff835bb9601fb415c3cc71eb75ec5129
-size 686
+var faceApiModel = (function preloadFaceApi() {
+    if (typeof importScripts === 'function') {
+        importScripts('/static/js/face-api.min.js');   
+    }
+    const faceapiModels = `static/face-api-models`;
+    const {
+        tinyFaceDetector,
+        faceLandmark68Net,
+        faceRecognitionNet,
+        faceExpressionNet,
+        ssdMobilenetv1,
+    } = faceapi.nets;
+    
+    return Promise.all([
+        tinyFaceDetector.loadFromUri(faceapiModels),
+        faceLandmark68Net.loadFromUri(faceapiModels),
+        faceRecognitionNet.loadFromUri(faceapiModels),
+        faceExpressionNet.loadFromUri(faceapiModels),
+        ssdMobilenetv1.loadFromUri(faceapiModels),
+    ]);
+})();
