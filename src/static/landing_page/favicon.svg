@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:24aef15c73b3136672c1e14645ab66f4bd8701df4ae5b65c1e295f183a04e210
-size 1303
+<svg xmlns="http://www.w3.org/2000/svg" width="843" height="634" viewBox="0 0 843 634">
+  <g id="Group_1" data-name="Group 1" transform="translate(-179 513)">
+    <g id="logo" transform="translate(280.273 -513.393)">
+      <ellipse id="Ellipse_1-2" data-name="Ellipse 1" cx="330" cy="317" rx="375" ry="317" transform="translate(-0.273 0.393)" fill="#323232"/>
+    </g>
+    <g id="Group_2" data-name="Group 2" transform="translate(317.424 -397)">
+      <g id="Component_1_2-2" data-name="Component 1 – 2" transform="translate(0 15.882)">
+        <text id="D-2" data-name="D" transform="translate(0 287.031)" fill="#ca9eff" font-size="313" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">D</tspan></text>
+        <text id="_1-2" data-name="1" transform="translate(273.063 301.98) rotate(-30)" fill="#ca9eff" font-size="311" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">L</tspan></text>
+        <path id="Path_1-2" data-name="Path 1" d="M96.393,0-1.579,176.227" transform="translate(70.084 83.293)" fill="#ca9eff" stroke="#ca9eff" stroke-width="26"/>
+      </g>
+      <text id="S" transform="translate(374.576 0)" fill="#ca9eff" font-size="315" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="298">S</tspan></text>
+    </g>
+  </g>
+</svg>
