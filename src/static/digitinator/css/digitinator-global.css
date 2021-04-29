@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Karla);
+:export{
+    LIGHT_WHITE:#ebebeb;
+    SECONDARY_ACCENT:#ca9eff
+}
+:root{
+    font-size:6.25%
+}
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust: 100%
+}
+body{
+    background-color:#212121;
+    color:#ebebeb;
+    margin:0
+}
+h1{
+    font-size:32rem
+}
+h2{
+    font-size:28rem
+}
+h3{
+    font-size:24rem
+}
+h3,h4,h5,h6{
+    font-weight:400
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:Monsterrat,Verdana,Geneva,Tahoma,sans-serif;
+    margin:0 0 10rem
+}
+a,button,div,label,li,p,span{
+    font-family:Karla,Arial,Helvetica,sans-serif;
+    font-size:16rem
+}
+.cursor-pointer{
+    cursor:pointer
+}
+.container{
+    max-width:650rem
+}
+.major-top-margin{
+    margin-top:50rem
+}
