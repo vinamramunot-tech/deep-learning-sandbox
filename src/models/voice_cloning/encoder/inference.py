@@ -48,10 +48,9 @@ def embed_frames_batch(frames_batch):
     """
     if _model is None:
         raise Exception("Model was not loaded. Call load_model() before inference.")
-    
+
     frames = torch.from_numpy(frames_batch).to(_device)
-    embed = _model.forward(frames).detach().cpu().numpy()
-    return embed
+    return _model.forward(frames).detach().cpu().numpy()
 
 
 def compute_partial_slices(n_samples, partial_utterance_n_frames=partials_n_frames,

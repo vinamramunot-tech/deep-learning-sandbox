@@ -33,18 +33,14 @@ class Visualizations:
         self.losses = []
         self.eers = []
         print("Updating the visualizations every %d steps." % update_every)
-        
-        self.disabled = disabled    
+
+        self.disabled = disabled
         if self.disabled:
             return 
-        
+
         # Set the environment name
         now = str(datetime.now().strftime("%d-%m %Hh%M"))
-        if env_name is None:
-            self.env_name = now
-        else:
-            self.env_name = "%s (%s)" % (env_name, now)
-        
+        self.env_name = now if env_name is None else "%s (%s)" % (env_name, now)
         # Connect to visdom and open the corresponding window in the browser
         try:
             self.vis = visdom.Visdom(server, env=self.env_name, raise_exceptions=True)
@@ -52,7 +48,7 @@ class Visualizations:
             raise Exception("No visdom server detected. Run the command \"visdom\" in your CLI to "
                             "start it.")
         # webbrowser.open("http://localhost:8097/env/" + self.env_name)
-        
+
         # Create the windows
         self.loss_win = None
         self.eer_win = None

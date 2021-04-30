@@ -10,7 +10,8 @@ def split_title_line(title_text, max_words=5):
 	(returning it with the string), with maximum number of words on it
 	"""
 	seq = title_text.split()
-	return "\n".join([" ".join(seq[i:i + max_words]) for i in range(0, len(seq), max_words)])
+	return "\n".join(
+	    " ".join(seq[i:i + max_words]) for i in range(0, len(seq), max_words))
 
 def plot_alignment(alignment, path, title=None, split_title=False, max_len=None):
 	if max_len is not None:

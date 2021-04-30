@@ -14,8 +14,8 @@ class DatasetLog:
     """
     def __init__(self, root, name):
         self.text_file = open(Path(root, "Log_%s.txt" % name.replace("/", "_")), "w")
-        self.sample_data = dict()
-        
+        self.sample_data = {}
+
         start_time = str(datetime.now().strftime("%A %d %B %Y at %H:%M"))
         self.write_line("Creating dataset %s on %s" % (name, start_time))
         self.write_line("-----")
@@ -34,7 +34,7 @@ class DatasetLog:
         
     def add_sample(self, **kwargs):
         for param_name, value in kwargs.items():
-            if not param_name in self.sample_data:
+            if param_name not in self.sample_data:
                 self.sample_data[param_name] = []
             self.sample_data[param_name].append(value)
             

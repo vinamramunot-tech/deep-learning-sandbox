@@ -35,6 +35,4 @@ class Speaker:
 
         utterances = self.utterance_cycler.sample(count)
 
-        a = [(u,) + u.random_partial(n_frames) for u in utterances]
-
-        return a
+        return [(u,) + u.random_partial(n_frames) for u in utterances]

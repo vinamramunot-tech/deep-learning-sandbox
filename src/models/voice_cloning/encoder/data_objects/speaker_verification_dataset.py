@@ -10,7 +10,7 @@ class SpeakerVerificationDataset(Dataset):
     def __init__(self, datasets_root: Path):
         self.root = datasets_root
         speaker_dirs = [f for f in self.root.glob("*") if f.is_dir()]
-        if len(speaker_dirs) == 0:
+        if not speaker_dirs:
             raise Exception("No speakers found. Make sure you are pointing to the directory "
                             "containing all preprocessed speaker directories.")
         self.speakers = [Speaker(speaker_dir) for speaker_dir in speaker_dirs]

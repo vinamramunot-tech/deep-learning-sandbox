@@ -32,21 +32,21 @@ def preprocess_wav(fpath_or_wav: Union[str, Path, np.ndarray],
     this argument will be ignored.
     """
     # Load the wav from disk if needed
-    if isinstance(fpath_or_wav, str) or isinstance(fpath_or_wav, Path):
+    if isinstance(fpath_or_wav, (str, Path)):
         wav, source_sr = librosa.load(str(fpath_or_wav), sr=None)
     else:
         wav = fpath_or_wav
-    
+
     # Resample the wav if needed
     if source_sr is not None and source_sr != sampling_rate:
         wav = librosa.resample(wav, source_sr, sampling_rate)
-        
+
     # Apply the preprocessing: normalize volume and shorten long silences 
     if normalize:
         wav = normalize_volume(wav, audio_norm_target_dBFS, increase_only=True)
     if webrtcvad and trim_silence:
         wav = trim_long_silences(wav)
-    
+
     return wav
 
 
