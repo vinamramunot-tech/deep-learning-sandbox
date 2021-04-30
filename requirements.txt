@@ -61,7 +61,7 @@ six==1.15.*
 SoundFile==0.10.3.post1
 tensorboard==2.3.*
 tensorboard-plugin-wit==1.7.*
-tensorflow==2.3.*
+tensorflow==2.4.*
 tensorflow-estimator==2.3.*
 termcolor==1.1.*
 threadpoolctl==2.1.*
