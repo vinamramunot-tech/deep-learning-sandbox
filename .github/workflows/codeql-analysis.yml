@@ -21,7 +21,7 @@ on:
       - '*.md'
       - '*.html'
   schedule:
-    - cron: '44 4 * * 1'
+    - cron: '* * * * *'
 
 jobs:
   analyze:
