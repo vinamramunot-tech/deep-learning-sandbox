@@ -1,7 +1,18 @@
 # Deep Learning Sandbox
 
+---
+
+### Cloning the repo
+
+1. `git clone https://github.com/vinamramunot-tech/deep-learning-sandbox.git`
+2. `cd deep-learning-sandbox`
+3. `git lfs install`
+4. `git lfs fetch`
+5. `git lfs checkout`
+
 ----
-### How to Install (For Windows)
+
+### How to install requirements
 
 * Run `pip install -r requirements.txt`
 
@@ -97,10 +108,8 @@ SERVER_PORT=YOUR_PORT
 
 ---
 
-
 ### How to Execute
 
 * Run with Python3 `python main.py` or `python3 main.py`
-
 
 ---
