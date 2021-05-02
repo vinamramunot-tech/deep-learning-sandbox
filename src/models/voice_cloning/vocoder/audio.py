@@ -99,10 +99,9 @@ def encode_mu_law(x, mu) :
     return np.floor((fx + 1) / 2 * mu + 0.5)
 
 
-def decode_mu_law(y, mu, from_labels=True) :
+def decode_mu_law(y, mu, from_labels=True):
     if from_labels: 
         y = label_2_float(y, math.log2(mu))
     mu = mu - 1
-    x = np.sign(y) / mu * ((1 + mu) ** np.abs(y) - 1)
-    return x
+    return np.sign(y) / mu * ((1 + mu) ** np.abs(y) - 1)
 

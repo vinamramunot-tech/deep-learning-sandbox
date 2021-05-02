@@ -164,7 +164,7 @@ class WaveRNN(nn.Module) :
     def init_hidden(self, batch_size=1) :
         return torch.zeros(batch_size, self.hidden_size).cuda()
     
-    def num_params(self) :
+    def num_params(self):
         parameters = filter(lambda p: p.requires_grad, self.parameters())
-        parameters = sum([np.prod(p.size()) for p in parameters]) / 1_000_000
+        parameters = sum(np.prod(p.size()) for p in parameters) / 1_000_000
         print('Trainable Parameters: %.3f million' % parameters)

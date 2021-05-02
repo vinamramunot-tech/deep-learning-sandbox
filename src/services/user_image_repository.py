@@ -59,16 +59,16 @@ def update_images(user: User):
         user_table.update_one({'_id': ObjectId(user_id)}, {'$set': {'images': user_to_update['images']}})
 
 def delete(user_dict):
-    image_list = list()
+    image_list = []
 
-    if not 'user_id' in user_dict:
+    if 'user_id' not in user_dict:
         raise create_error_message('Bad Request')
-    
+
     if user_dict['image_id'] == '':
         image_list = user_table.find_one({'_id': ObjectId(user_dict['user_id'])})['images']
         image_table.delete(image_list)
         return user_table.delete_one({'_id': ObjectId(user_dict['user_id'])})
-    
+
     user = user_table.find_one({'_id': ObjectId(user_dict['user_id'])})
     user['images'].remove(user_dict['image_id'])
     user_table.find_one_and_update({'_id': ObjectId(user_dict['user_id'])}, 
@@ -84,7 +84,7 @@ def get_user_by_username(username):
     return user_table.find_one({'name': username}) if isinstance(username, str) else None
 
 def user_already_exists(user: User):
-    return True if user_table.find_one({'name': user.get_name()}) else False
+    return bool(user_table.find_one({'name': user.get_name()}))
 
 def username_did_not_change(user: User):
     return read_one(user)['name'] == user.get_name()

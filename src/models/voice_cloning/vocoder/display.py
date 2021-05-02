@@ -6,10 +6,7 @@ import sys
 
 def progbar(i, n, size=16):
     done = (i * size) // n
-    bar = ''
-    for i in range(size):
-        bar += '█' if i <= done else '░'
-    return bar
+    return ''.join('█' if i <= done else '░' for i in range(size))
 
 
 def stream(message) :
@@ -21,18 +18,18 @@ def stream(message) :
         sys.stdout.write("\r{%s}" % message)
 
 
-def simple_table(item_tuples) :
+def simple_table(item_tuples):
 
     border_pattern = '+---------------------------------------'
     whitespace = '                                            '
 
     headings, cells, = [], []
 
-    for item in item_tuples :
+    for item in item_tuples:
 
         heading, cell = str(item[0]), str(item[1])
 
-        pad_head = True if len(heading) < len(cell) else False
+        pad_head = len(heading) < len(cell)
 
         pad = abs(len(heading) - len(cell))
         pad = whitespace[:pad]
@@ -72,16 +69,16 @@ def simple_table(item_tuples) :
     print(' ')
 
 
-def time_since(started) :
+def time_since(started):
     elapsed = time.time() - started
     m = int(elapsed // 60)
     s = int(elapsed % 60)
-    if m >= 60 :
-        h = int(m // 60)
-        m = m % 60
-        return f'{h}h {m}m {s}s'
-    else :
+    if m < 60:
         return f'{m}m {s}s'
+
+    h = int(m // 60)
+    m %= 60
+    return f'{h}h {m}m {s}s'
 
 
 def save_attention(attn, path) :

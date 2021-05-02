@@ -31,7 +31,7 @@ class MelResNet(nn.Module):
         self.conv_in = nn.Conv1d(in_dims, compute_dims, kernel_size=k_size, bias=False)
         self.batch_norm = nn.BatchNorm1d(compute_dims)
         self.layers = nn.ModuleList()
-        for i in range(res_blocks):
+        for _ in range(res_blocks):
             self.layers.append(ResBlock(compute_dims))
         self.conv_out = nn.Conv1d(compute_dims, res_out_dims, kernel_size=1)
 
@@ -161,10 +161,7 @@ class WaveRNN(nn.Module):
         rnn2 = self.get_gru_cell(self.rnn2)
 
         with torch.no_grad():
-            if torch.cuda.is_available():
-                mels = mels.cuda()
-            else:
-                mels = mels.cpu()
+            mels = mels.cuda() if torch.cuda.is_available() else mels.cpu()
             wave_len = (mels.size(-1) - 1) * self.hop_length
             mels = self.pad_tensor(mels.transpose(1, 2), pad=self.pad, side='both')
             mels, aux = self.upsample(mels.transpose(1, 2))
@@ -236,7 +233,7 @@ class WaveRNN(nn.Module):
         output = torch.stack(output).transpose(0, 1)
         output = output.cpu().numpy()
         output = output.astype(np.float64)
-        
+
         if batched:
             output = self.xfade_and_unfold(output, target, overlap)
         else:
@@ -251,7 +248,7 @@ class WaveRNN(nn.Module):
         fade_out = np.linspace(1, 0, 20 * self.hop_length)
         output = output[:wave_len]
         output[-20 * self.hop_length:] *= fade_out
-        
+
         self.train()
 
         return output
@@ -279,7 +276,7 @@ class WaveRNN(nn.Module):
             padded = torch.zeros(b, total, c).cuda()
         else:
             padded = torch.zeros(b, total, c).cpu()
-        if side == 'before' or side == 'both':
+        if side in ['before', 'both']:
             padded[:, pad:pad + t, :] = x
         elif side == 'after':
             padded[:, :t, :] = x
@@ -429,6 +426,6 @@ class WaveRNN(nn.Module):
 
     def num_params(self, print_out=True):
         parameters = filter(lambda p: p.requires_grad, self.parameters())
-        parameters = sum([np.prod(p.size()) for p in parameters]) / 1_000_000
+        parameters = sum(np.prod(p.size()) for p in parameters) / 1_000_000
         if print_out :
             print('Trainable Parameters: %.3fM' % parameters)

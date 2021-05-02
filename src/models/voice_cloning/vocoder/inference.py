@@ -56,9 +56,10 @@ def infer_waveform(mel, normalize=True,  batched=True, target=8000, overlap=800,
     """
     if _model is None:
         raise Exception("Please load Wave-RNN in memory before using it")
-    
+
     if normalize:
         mel = mel / hp.mel_max_abs_value
     mel = torch.from_numpy(mel[None, ...])
-    wav = _model.generate(mel, batched, target, overlap, hp.mu_law, progress_callback)
-    return wav
+    return _model.generate(
+        mel, batched, target, overlap, hp.mu_law, progress_callback
+    )
