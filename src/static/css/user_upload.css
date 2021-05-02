@@ -8,6 +8,19 @@ body {
 .user-controls {
     display: flex;
     margin: 5px;
+    flex-wrap: wrap;
+}
+
+input#user-name {
+    margin-bottom: 5px;
+}
+
+#new-user span{
+    white-space: nowrap;
+}
+
+form#new-user {
+    text-align: center;
 }
 
 .user-controls > *:not(:first-child) {

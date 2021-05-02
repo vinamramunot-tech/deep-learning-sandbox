@@ -52,3 +52,8 @@ p, div, span, button, a, li {
 #main-logo {
   background-color: rgba(247,247,247,255);
 }
+
+.intro-video {
+  display: block;
+  margin: 0 auto;
+}

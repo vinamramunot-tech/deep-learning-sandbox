@@ -8,7 +8,8 @@
 
     <link rel="icon" href="../static/landing_page/favicon.ico" />
     <link rel="apple-touch-icon" href="../static/landing_page/favicon.ico" />
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/shared/responsive_media.css">
     <link
         defer
         rel="stylesheet"
@@ -24,18 +25,18 @@
     {% include "landing_page_templates/nav_bar.html" %}
     <div class="info">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-4">
                 </div>
                 <div class="col-md-4">
                     <div class="card card-threeD mt-4" id="main-logo">
-                        <img class="img-fluid m-4" src="../static/landing_page/main_page_logo.jpeg"
-                            alt="Deep Learning Sandbox">
+                        <img class="img-fluid m-4" src="../static/landing_page/main_page_logo.jpeg" alt="Deep Learning Sandbox Logo">
                     </div>
                 </div>
-                <div class="col-md-4">
-                </div>
+                <div class="col-md-4"></div>
             </div>
+
             <div class="row" id="home">
                 <div class="col"></div>
                 <p class="text-xl-center m-5 text-container">Welcome to the Deep Learning Sandbox, a feature-rich
@@ -45,10 +46,25 @@
                     students and interested individuals alike!</p>
                 <div class="col"></div>
             </div>
+
+            <video alt="A Donald Trump deepfake video introducing the background, goals, applications, and authors of this project." class="responsive-media intro-video" controls>
+                <source type="video/mp4"  src="../../static/landing_page/intro_video/intro_video.mp4" />
+                <track  
+                    src="../../static/landing_page/intro_video/intro_video_captions.vtt" 
+                    label="English" 
+                    kind="captions" 
+                    srclang="en-us" 
+                    default 
+                />
+            </video>
+            
             <hr>
+            
             <h2 class="text-center">Applications</h2>
             {% include "landing_page_templates/cards.html" %}
+            
             <hr>
+            
             <h2 class="text-center">About Us</h2>
             {% include "landing_page_templates/about_us.html" %}
         </div>
